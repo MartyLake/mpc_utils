@@ -11,7 +11,7 @@ FILEOUT=sys.argv[1]
 URL=sys.argv[2]
 PORT=sys.argv[3]
 PASSWORD=None
-if len(sys.argv) >= 4:
+if len(sys.argv) > 4:
     PASSWORD=sys.argv[4]
 
 # use_unicode will enable the utf-8 mode for python2
