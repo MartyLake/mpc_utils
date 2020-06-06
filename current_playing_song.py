@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import mpd
 import sys
+import io
 
 if len(sys.argv) < 3 :
     print ("usage: {} [FILEOUT PATH] [URL] [PORT] [PASSWORD]".format(sys.argv[0]))
@@ -35,7 +36,7 @@ while True:
         #    print(x, song[x])
         outstr = "Now playing: {} - {}".format(song["title"], song["artist"])
         print(outstr)
-        with open(FILEOUT, "w") as f:
+        with io.open(FILEOUT, "w", encoding='utf-8') as f:
              f.write(outstr)
 
     client.idle()
